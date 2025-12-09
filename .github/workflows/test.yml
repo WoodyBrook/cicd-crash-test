@@ -22,13 +22,13 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r victim/requirements.txt
     
     # 场景 B: 环境变量缺失 - 这里没有设置 API_KEY
     # 场景 C: 语法错误 - 下面的缩进故意写错（使用了错误的缩进）
     - name: Run tests
       run: |
-        python main.py
+        python victim/main.py
     # 注意：这里故意缺少环境变量配置，并且下面有缩进错误
     # 场景 C 的语法错误：env 的缩进不正确（应该和 run 对齐）
       env:

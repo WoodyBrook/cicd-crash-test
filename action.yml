@@ -24,7 +24,7 @@ inputs:
   target_dir:
     description: "Repo subdir the agent is allowed to modify"
     required: false
-    default: "cicd crash test"
+    default: "victim"
 
 runs:
   using: "docker"

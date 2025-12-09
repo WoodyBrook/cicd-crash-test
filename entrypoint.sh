@@ -10,7 +10,7 @@ fi
 
 # 可选：OPENAI_BASE_URL / MODEL_NAME / LOG_FILE / TARGET_DIR
 
-echo "[entrypoint] Using MODEL=${MODEL_NAME:-gpt-4o}, LOG_FILE=${LOG_FILE:-sample_failure.log}, TARGET_DIR=${TARGET_DIR:-cicd crash test}"
+echo "[entrypoint] Using MODEL=${MODEL_NAME:-gpt-4o}, LOG_FILE=${LOG_FILE:-sample_failure.log}, TARGET_DIR=${TARGET_DIR:-victim}"
 
 exec python /app/agent.py
 

@@ -7,7 +7,7 @@ Phase 1 本地 MVP：读取错误日志 -> 调用 LLM -> 通过工具函数仅�
   python agent.py
 可选环境变量：
   LOG_FILE=<路径>          默认 sample_failure.log
-  TARGET_DIR=<目录>        默认 "cicd crash test"（受害者仓库）
+  TARGET_DIR=<目录>        默认 "victim"（受害者仓库）
   MODEL_NAME=<模型名>      默认 gpt-4o
 """
 
@@ -19,7 +19,7 @@ from openai import OpenAI
 
 # ================= 配置区 =================
 LOG_FILE = os.getenv("LOG_FILE", "sample_failure.log")
-TARGET_DIR = os.getenv("TARGET_DIR", "cicd crash test")
+TARGET_DIR = os.getenv("TARGET_DIR", "victim")
 MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4o")
 
 # 只允许 Agent 修改的文件类型（建立信任基线）
