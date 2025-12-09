@@ -1,0 +1,170 @@
+2025-12-06T09:24:43.9338373Z Current runner version: '2.329.0'
+2025-12-06T09:24:43.9410723Z ##[group]Runner Image Provisioner
+2025-12-06T09:24:43.9412412Z Hosted Compute Agent
+2025-12-06T09:24:43.9413324Z Version: 20251124.448
+2025-12-06T09:24:43.9414330Z Commit: fda5086b43ec66ade217e5fcd18146c879571177
+2025-12-06T09:24:43.9415570Z Build Date: 2025-11-24T21:16:26Z
+2025-12-06T09:24:43.9416515Z ##[endgroup]
+2025-12-06T09:24:43.9417320Z ##[group]Operating System
+2025-12-06T09:24:43.9418332Z Ubuntu
+2025-12-06T09:24:43.9419080Z 24.04.3
+2025-12-06T09:24:43.9419790Z LTS
+2025-12-06T09:24:43.9420514Z ##[endgroup]
+2025-12-06T09:24:43.9421348Z ##[group]Runner Image
+2025-12-06T09:24:43.9442807Z Image: ubuntu-24.04
+2025-12-06T09:24:43.9443659Z Version: 20251126.144.1
+2025-12-06T09:24:43.9445310Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251126.144/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-06T09:24:43.9448001Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251126.144
+2025-12-06T09:24:43.9449726Z ##[endgroup]
+2025-12-06T09:24:43.9452026Z ##[group]GITHUB_TOKEN Permissions
+2025-12-06T09:24:43.9454813Z Contents: read
+2025-12-06T09:24:43.9455847Z Metadata: read
+2025-12-06T09:24:43.9456768Z Packages: read
+2025-12-06T09:24:43.9457576Z ##[endgroup]
+2025-12-06T09:24:43.9460660Z Secret source: Actions
+2025-12-06T09:24:43.9482755Z Prepare workflow directory
+2025-12-06T09:24:44.0197023Z Prepare all required actions
+2025-12-06T09:24:44.0254598Z Getting action download info
+2025-12-06T09:24:44.3889128Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2025-12-06T09:24:44.4939154Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+2025-12-06T09:24:44.6533487Z Complete job name: test
+2025-12-06T09:24:44.7273858Z ##[group]Run actions/checkout@v3
+2025-12-06T09:24:44.7274676Z with:
+2025-12-06T09:24:44.7275080Z   repository: WoodyBrook/DevOps-Intern
+2025-12-06T09:24:44.7275746Z   token: ***
+2025-12-06T09:24:44.7276131Z   ssh-strict: true
+2025-12-06T09:24:44.7276536Z   persist-credentials: true
+2025-12-06T09:24:44.7276976Z   clean: true
+2025-12-06T09:24:44.7277362Z   sparse-checkout-cone-mode: true
+2025-12-06T09:24:44.7277825Z   fetch-depth: 1
+2025-12-06T09:24:44.7278190Z   fetch-tags: false
+2025-12-06T09:24:44.7278559Z   lfs: false
+2025-12-06T09:24:44.7278911Z   submodules: false
+2025-12-06T09:24:44.7279307Z   set-safe-directory: true
+2025-12-06T09:24:44.7279926Z ##[endgroup]
+2025-12-06T09:24:44.8197347Z Syncing repository: WoodyBrook/DevOps-Intern
+2025-12-06T09:24:44.8200955Z ##[group]Getting Git version info
+2025-12-06T09:24:44.8204459Z Working directory is '/home/runner/work/DevOps-Intern/DevOps-Intern'
+2025-12-06T09:24:44.8210131Z [command]/usr/bin/git version
+2025-12-06T09:24:44.8277119Z git version 2.52.0
+2025-12-06T09:24:44.8306461Z ##[endgroup]
+2025-12-06T09:24:44.8322506Z Temporarily overriding HOME='/home/runner/work/_temp/c5e6c59a-1098-4852-ade7-67d384bf00fa' before making global git config changes
+2025-12-06T09:24:44.8326486Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-06T09:24:44.8328452Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/DevOps-Intern/DevOps-Intern
+2025-12-06T09:24:44.8366707Z Deleting the contents of '/home/runner/work/DevOps-Intern/DevOps-Intern'
+2025-12-06T09:24:44.8371348Z ##[group]Initializing the repository
+2025-12-06T09:24:44.8375667Z [command]/usr/bin/git init /home/runner/work/DevOps-Intern/DevOps-Intern
+2025-12-06T09:24:44.8488535Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-06T09:24:44.8491945Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2025-12-06T09:24:44.8494326Z hint: to use in all of your new repositories, which will suppress this warning,
+2025-12-06T09:24:44.8495672Z hint: call:
+2025-12-06T09:24:44.8496294Z hint:
+2025-12-06T09:24:44.8497146Z hint: 	git config --global init.defaultBranch <name>
+2025-12-06T09:24:44.8498215Z hint:
+2025-12-06T09:24:44.8499604Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-06T09:24:44.8501263Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-06T09:24:44.8502942Z hint:
+2025-12-06T09:24:44.8503609Z hint: 	git branch -m <name>
+2025-12-06T09:24:44.8504373Z hint:
+2025-12-06T09:24:44.8505376Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-12-06T09:24:44.8507477Z Initialized empty Git repository in /home/runner/work/DevOps-Intern/DevOps-Intern/.git/
+2025-12-06T09:24:44.8512235Z [command]/usr/bin/git remote add origin https://github.com/WoodyBrook/DevOps-Intern
+2025-12-06T09:24:44.8544555Z ##[endgroup]
+2025-12-06T09:24:44.8545760Z ##[group]Disabling automatic garbage collection
+2025-12-06T09:24:44.8548281Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-06T09:24:44.8580559Z ##[endgroup]
+2025-12-06T09:24:44.8583435Z ##[group]Setting up auth
+2025-12-06T09:24:44.8585648Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-06T09:24:44.8616283Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-06T09:24:44.9099892Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-06T09:24:44.9104364Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-06T09:24:44.9269956Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-06T09:24:45.0046753Z ##[endgroup]
+2025-12-06T09:24:45.0047902Z ##[group]Fetching the repository
+2025-12-06T09:24:45.0050161Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +c281d819688636948f90c921527dd08136f756e6:refs/remotes/origin/main
+2025-12-06T09:24:45.1408975Z remote: Enumerating objects: 9, done.        
+2025-12-06T09:24:45.1434382Z remote: Counting objects:  11% (1/9)        
+2025-12-06T09:24:45.1437181Z remote: Counting objects:  22% (2/9)        
+2025-12-06T09:24:45.1439787Z remote: Counting objects:  33% (3/9)        
+2025-12-06T09:24:45.1462832Z remote: Counting objects:  44% (4/9)        
+2025-12-06T09:24:45.1466274Z remote: Counting objects:  55% (5/9)        
+2025-12-06T09:24:45.1468876Z remote: Counting objects:  66% (6/9)        
+2025-12-06T09:24:45.1494218Z remote: Counting objects:  77% (7/9)        
+2025-12-06T09:24:45.1496963Z remote: Counting objects:  88% (8/9)        
+2025-12-06T09:24:45.1499294Z remote: Counting objects: 100% (9/9)        
+2025-12-06T09:24:45.1501222Z remote: Counting objects: 100% (9/9), done.        
+2025-12-06T09:24:45.1524025Z remote: Compressing objects:  14% (1/7)        
+2025-12-06T09:24:45.1525030Z remote: Compressing objects:  28% (2/7)        
+2025-12-06T09:24:45.1525996Z remote: Compressing objects:  42% (3/7)        
+2025-12-06T09:24:45.1527218Z remote: Compressing objects:  57% (4/7)        
+2025-12-06T09:24:45.1528226Z remote: Compressing objects:  71% (5/7)        
+2025-12-06T09:24:45.1529216Z remote: Compressing objects:  85% (6/7)        
+2025-12-06T09:24:45.1530177Z remote: Compressing objects: 100% (7/7)        
+2025-12-06T09:24:45.1531110Z remote: Compressing objects: 100% (7/7), done.        
+2025-12-06T09:24:45.1532607Z remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0 (from 0)        
+2025-12-06T09:24:45.4254490Z From https://github.com/WoodyBrook/DevOps-Intern
+2025-12-06T09:24:45.4255800Z  * [new ref]         c281d819688636948f90c921527dd08136f756e6 -> origin/main
+2025-12-06T09:24:45.6303465Z ##[endgroup]
+2025-12-06T09:24:45.6305236Z ##[group]Determining the checkout info
+2025-12-06T09:24:45.6307126Z ##[endgroup]
+2025-12-06T09:24:45.6308755Z ##[group]Checking out the ref
+2025-12-06T09:24:45.6310915Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-06T09:24:45.9762102Z Switched to a new branch 'main'
+2025-12-06T09:24:45.9763306Z branch 'main' set up to track 'origin/main'.
+2025-12-06T09:24:45.9789915Z ##[endgroup]
+2025-12-06T09:24:45.9846451Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-06T09:24:45.9855908Z 'c281d819688636948f90c921527dd08136f756e6'
+2025-12-06T09:24:46.0099281Z ##[group]Run actions/setup-python@v4
+2025-12-06T09:24:46.0099615Z with:
+2025-12-06T09:24:46.0099837Z   python-version: 3.9
+2025-12-06T09:24:46.0100086Z   check-latest: false
+2025-12-06T09:24:46.0100445Z   token: ***
+2025-12-06T09:24:46.0100668Z   update-environment: true
+2025-12-06T09:24:46.0100933Z   allow-prereleases: false
+2025-12-06T09:24:46.0101187Z ##[endgroup]
+2025-12-06T09:24:46.2061833Z ##[group]Installed versions
+2025-12-06T09:24:46.5754992Z Successfully set up CPython (3.9.25)
+2025-12-06T09:24:46.5755874Z ##[endgroup]
+2025-12-06T09:24:46.5886043Z ##[group]Run pip install --upgrade pip
+2025-12-06T09:24:46.5886483Z [36;1mpip install --upgrade pip[0m
+2025-12-06T09:24:46.5886810Z [36;1mpip install -r requirements.txt[0m
+2025-12-06T09:24:46.6337113Z shell: /usr/bin/bash -e {0}
+2025-12-06T09:24:46.6337415Z env:
+2025-12-06T09:24:46.6337707Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:46.6338160Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2025-12-06T09:24:46.6338603Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:46.6338982Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:46.6339351Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:46.6339770Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2025-12-06T09:24:46.6340346Z ##[endgroup]
+2025-12-06T09:24:49.4284665Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (25.3)
+2025-12-06T09:24:50.0474102Z ##[group]Run python main.py
+2025-12-06T09:24:50.0474410Z [36;1mpython main.py[0m
+2025-12-06T09:24:50.0509382Z shell: /usr/bin/bash -e {0}
+2025-12-06T09:24:50.0509622Z env:
+2025-12-06T09:24:50.0509863Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:50.0510273Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2025-12-06T09:24:50.0510657Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:50.0511011Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:50.0511355Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2025-12-06T09:24:50.0512023Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2025-12-06T09:24:50.0512318Z   API_KEY: 
+2025-12-06T09:24:50.0512481Z ##[endgroup]
+2025-12-06T09:24:50.0673138Z Traceback (most recent call last):
+2025-12-06T09:24:50.0687163Z   File "/home/runner/work/DevOps-Intern/DevOps-Intern/main.py", line 7, in <module>
+2025-12-06T09:24:50.0687965Z     import numpy as np
+2025-12-06T09:24:50.0688394Z ModuleNotFoundError: No module named 'numpy'
+2025-12-06T09:24:50.0704136Z ##[error]Process completed with exit code 1.
+2025-12-06T09:24:50.0793173Z Post job cleanup.
+2025-12-06T09:24:50.1530133Z [command]/usr/bin/git version
+2025-12-06T09:24:50.1568648Z git version 2.52.0
+2025-12-06T09:24:50.1617792Z Temporarily overriding HOME='/home/runner/work/_temp/f4dfcad7-edf4-4d44-99de-1959db8d8dd1' before making global git config changes
+2025-12-06T09:24:50.1619749Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-06T09:24:50.1623099Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/DevOps-Intern/DevOps-Intern
+2025-12-06T09:24:50.1656883Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-06T09:24:50.1689458Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-06T09:24:50.1932563Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-06T09:24:50.1954876Z http.https://github.com/.extraheader
+2025-12-06T09:24:50.1968676Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-06T09:24:50.2087390Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-06T09:24:50.2377383Z Cleaning up orphan processes

@@ -1,0 +1,38 @@
+name: "CI/CD Bodyguard"
+description: "Analyze failure log and patch config files (requirements, yaml, env)."
+author: "your-name"
+branding:
+  icon: "shield"
+  color: "blue"
+
+inputs:
+  openai_api_key:
+    description: "API key for OpenAI-compatible endpoint (e.g., Ark)"
+    required: true
+  openai_base_url:
+    description: "Base URL for OpenAI-compatible endpoint (optional)"
+    required: false
+    default: ""
+  model_name:
+    description: "Model or endpoint ID (optional)"
+    required: false
+    default: "gpt-4o"
+  log_file:
+    description: "Path to the failure log file to analyze"
+    required: false
+    default: "sample_failure.log"
+  target_dir:
+    description: "Repo subdir the agent is allowed to modify"
+    required: false
+    default: "cicd crash test"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    OPENAI_API_KEY: ${{ inputs.openai_api_key }}
+    OPENAI_BASE_URL: ${{ inputs.openai_base_url }}
+    MODEL_NAME: ${{ inputs.model_name }}
+    LOG_FILE: ${{ inputs.log_file }}
+    TARGET_DIR: ${{ inputs.target_dir }}
+
